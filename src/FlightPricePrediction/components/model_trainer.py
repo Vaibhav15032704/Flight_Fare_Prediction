@@ -9,6 +9,8 @@ from src.FlightPricePrediction.utils.utils import save_object
 from src.FlightPricePrediction.utils.utils import evaluate_model
 
 from sklearn.linear_model import LinearRegression, Ridge,Lasso,ElasticNet
+from xgboost import XGBRegressor
+
 
 
 @dataclass 
@@ -32,6 +34,7 @@ class ModelTrainer:
 
             models={
             'LinearRegression':LinearRegression(),
+            'xgboost':XGBRegressor(),
             'Lasso':Lasso(),
             'Ridge':Ridge(),
             'Elasticnet':ElasticNet()

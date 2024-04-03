@@ -1,0 +1,28 @@
+[2024-04-03 12:47:54,134] 24 root - INFO - data ingestion started
+[2024-04-03 12:47:54,150] 28 root - INFO -  i have read dataset as a df
+[2024-04-03 12:47:54,183] 33 root - INFO -  i have saved the raw dataset in artifact folder
+[2024-04-03 12:47:54,183] 35 root - INFO - here i have performed train test split
+[2024-04-03 12:47:54,200] 38 root - INFO - train test split completed
+[2024-04-03 12:47:54,230] 43 root - INFO - data ingestion part completed
+[2024-04-03 12:47:54,278] 81 root - INFO - read train and test data complete
+[2024-04-03 12:47:54,292] 82 root - INFO - Train Dataframe Head : 
+       Airline   Source Destination Total_Stops  Price  Month_of_Journey  Day_of_Journey  Duration_in_minute
+0    Air India  Kolkata    Banglore      1 stop  10623                 5              18                1615
+1     Air Asia  Kolkata    Banglore     2 stops   6810                 6               6                 500
+2       IndiGo  Kolkata    Banglore    non-stop   4804                 6              15                 165
+3    Air India    Delhi      Cochin     2 stops  12392                 5              18                1560
+4  Jet Airways  Kolkata    Banglore      1 stop   9663                 5              15                 730
+[2024-04-03 12:47:54,301] 83 root - INFO - Test Dataframe Head : 
+       Airline   Source Destination Total_Stops  Price  Month_of_Journey  Day_of_Journey  Duration_in_minute
+0    Air India    Delhi      Cochin      1 stop   8372                 6              27                 375
+1     SpiceJet   Mumbai   Hyderabad    non-stop   1965                 6              27                  90
+2     SpiceJet  Chennai     Kolkata    non-stop   3543                 1               5                 135
+3  Jet Airways    Delhi      Cochin     2 stops  10199                 6              24                 910
+4     Air Asia    Delhi      Cochin      1 stop  11410                 6               6                 340
+[2024-04-03 12:47:54,301] 30 root - INFO - Data Transformation initiated
+[2024-04-03 12:47:54,301] 37 root - INFO - Pipeline Initiated
+[2024-04-03 12:47:54,379] 101 root - INFO - Applying preprocessing object on training and testing datasets.
+[2024-04-03 12:47:54,380] 111 root - INFO - preprocessing pickle file saved
+[2024-04-03 12:47:54,380] 27 root - INFO - Splitting Dependent and Independent variables from train and test data
+[2024-04-03 12:47:55,974] 46 root - INFO - Model Report : {'LinearRegression': 0.6544053564397095, 'xgboost': 0.755962497258019, 'Lasso': 0.6544043915603821, 'Ridge': 0.6543398036904013, 'Elasticnet': 0.5729448580227339}
+[2024-04-03 12:47:55,974] 59 root - INFO - Best Model Found , Model Name : xgboost , R2 Score : 0.755962497258019
