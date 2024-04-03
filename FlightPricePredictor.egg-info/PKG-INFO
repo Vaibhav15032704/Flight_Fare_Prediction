@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: FlightPricePredictor
+Version: 0.0.1
+Author: Vaibhav Deshmukh
+Author-email: vaibhavdeshmukh5121@gmail.com
+Requires-Dist: scikit-learn
+Requires-Dist: pandas
+Requires-Dist: numpy
