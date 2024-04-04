@@ -30,8 +30,8 @@ class DataTransformation:
             logging.info('Data Transformation initiated')
             
             # Define which columns should be ordinal-encoded and which should be scaled
-            categorical_cols = ['Airline', 'Source', 'Destination',	'Total_Stops', 'Month_of_Journey', 'Day_of_Journey']
-            numerical_cols = ['Duration_in_minute']
+            categorical_cols = ['Airline', 'Source', 'Destination',	'Total_Stops']
+            numerical_cols = ['Month_of_Journey', 'Day_of_Journey','Duration_in_minute']
             
             
             logging.info('Pipeline Initiated')

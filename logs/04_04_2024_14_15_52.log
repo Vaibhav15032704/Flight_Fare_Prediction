@@ -1,0 +1,24 @@
+[2024-04-04 14:15:55,111] 24 root - INFO - data ingestion started
+[2024-04-04 14:15:55,143] 28 root - INFO -  i have read dataset as a df
+[2024-04-04 14:15:55,175] 33 root - INFO -  i have saved the raw dataset in artifact folder
+[2024-04-04 14:15:55,175] 35 root - INFO - here i have performed train test split
+[2024-04-04 14:15:55,176] 38 root - INFO - train test split completed
+[2024-04-04 14:15:55,207] 43 root - INFO - data ingestion part completed
+[2024-04-04 14:15:55,238] 81 root - INFO - read train and test data complete
+[2024-04-04 14:15:55,238] 82 root - INFO - Train Dataframe Head : 
+       Airline    Source Destination Total_Stops  Month_of_Journey  Day_of_Journey  Duration_in_minute  Price
+0       IndiGo  Banglore       Delhi    non-stop                 4              18                 170   5740
+1        GoAir     Delhi      Cochin      1 stop                 3               3                 350   6112
+2       IndiGo     Delhi      Cochin      1 stop                 9               3                 265   6937
+3     SpiceJet  Banglore       Delhi    non-stop                 5              27                 175   3311
+4  Jet Airways     Delhi      Cochin      1 stop                 3              21                1280  12767
+[2024-04-04 14:15:55,257] 83 root - INFO - Test Dataframe Head : 
+       Airline    Source Destination Total_Stops  Month_of_Journey  Day_of_Journey  Duration_in_minute  Price
+0       IndiGo   Kolkata    Banglore      1 stop                 1               5                 240   4226
+1       IndiGo  Banglore       Delhi    non-stop                 9               6                 165   4077
+2  Jet Airways     Delhi      Cochin      1 stop                 3              21                 335  12242
+3  Jet Airways  Banglore   New Delhi      1 stop                 3              18                 615  13555
+4       IndiGo    Mumbai   Hyderabad    non-stop                 3               3                  85   4784
+[2024-04-04 14:15:55,257] 30 root - INFO - Data Transformation initiated
+[2024-04-04 14:15:55,257] 37 root - INFO - Pipeline Initiated
+[2024-04-04 14:15:55,295] 119 root - INFO - Exception occured in the initiate_datatransformation

@@ -1,0 +1,101 @@
+[2024-04-04 15:10:01,476] 96 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:80
+ * Running on http://192.168.125.29:80
+[2024-04-04 15:10:01,476] 96 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[2024-04-04 15:10:04,936] 67 root - INFO - Dataframe Gathered
+[2024-04-04 15:10:06,190] 1414 app - ERROR - Exception on /predict [POST]
+Traceback (most recent call last):
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\src\FlightPricePrediction\pipelines\prediction_pipeline.py", line 21, in predict
+    scaled_data=preprocessor.transform(features)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\utils\_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\compose\_column_transformer.py", line 827, in transform
+    Xs = self._fit_transform(
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\compose\_column_transformer.py", line 681, in _fit_transform
+    return Parallel(n_jobs=self.n_jobs)(
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\utils\parallel.py", line 65, in __call__
+    return super().__call__(iterable_with_config)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\joblib\parallel.py", line 1863, in __call__
+    return output if self.return_generator else list(output)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\joblib\parallel.py", line 1792, in _get_sequential_output
+    res = func(*args, **kwargs)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\utils\parallel.py", line 127, in __call__
+    return self.function(*args, **kwargs)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\pipeline.py", line 940, in _transform_one
+    res = transformer.transform(X)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\pipeline.py", line 696, in transform
+    Xt = transform.transform(Xt)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\utils\_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\preprocessing\_encoders.py", line 1027, in transform
+    X_int, X_mask = self._transform(
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\preprocessing\_encoders.py", line 200, in _transform
+    raise ValueError(msg)
+ValueError: Found unknown categories ['4'] in column 4 during transform
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 36, in predict_datapoint
+    pred=predict_pipeline.predict(final_data)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\src\FlightPricePrediction\pipelines\prediction_pipeline.py", line 30, in predict
+    raise customexception(e,sys)
+src.FlightPricePrediction.exception.customexception: Error occured in python script name [C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\src\FlightPricePrediction\pipelines\prediction_pipeline.py] line number [21] error message [Found unknown categories ['4'] in column 4 during transform]
+[2024-04-04 15:10:06,204] 96 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2024 15:10:06] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+[2024-04-04 15:10:10,911] 67 root - INFO - Dataframe Gathered
+[2024-04-04 15:10:10,937] 1414 app - ERROR - Exception on /predict [POST]
+Traceback (most recent call last):
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\src\FlightPricePrediction\pipelines\prediction_pipeline.py", line 21, in predict
+    scaled_data=preprocessor.transform(features)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\utils\_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\compose\_column_transformer.py", line 827, in transform
+    Xs = self._fit_transform(
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\compose\_column_transformer.py", line 681, in _fit_transform
+    return Parallel(n_jobs=self.n_jobs)(
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\utils\parallel.py", line 65, in __call__
+    return super().__call__(iterable_with_config)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\joblib\parallel.py", line 1863, in __call__
+    return output if self.return_generator else list(output)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\joblib\parallel.py", line 1792, in _get_sequential_output
+    res = func(*args, **kwargs)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\utils\parallel.py", line 127, in __call__
+    return self.function(*args, **kwargs)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\pipeline.py", line 940, in _transform_one
+    res = transformer.transform(X)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\pipeline.py", line 696, in transform
+    Xt = transform.transform(Xt)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\utils\_set_output.py", line 157, in wrapped
+    data_to_wrap = f(self, X, *args, **kwargs)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\preprocessing\_encoders.py", line 1027, in transform
+    X_int, X_mask = self._transform(
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\sklearn\preprocessing\_encoders.py", line 200, in _transform
+    raise ValueError(msg)
+ValueError: Found unknown categories ['4'] in column 4 during transform
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\env\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "app.py", line 36, in predict_datapoint
+    pred=predict_pipeline.predict(final_data)
+  File "C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\src\FlightPricePrediction\pipelines\prediction_pipeline.py", line 30, in predict
+    raise customexception(e,sys)
+src.FlightPricePrediction.exception.customexception: Error occured in python script name [C:\Users\vaibh\OneDrive\Desktop\Flight_Fare_Project\src\FlightPricePrediction\pipelines\prediction_pipeline.py] line number [21] error message [Found unknown categories ['4'] in column 4 during transform]
+[2024-04-04 15:10:10,937] 96 werkzeug - INFO - 127.0.0.1 - - [04/Apr/2024 15:10:10] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -

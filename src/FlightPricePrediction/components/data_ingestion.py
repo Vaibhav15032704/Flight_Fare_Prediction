@@ -24,7 +24,7 @@ class DataIngestion:
         logging.info("data ingestion started")
         
         try:
-            data=pd.read_csv(Path(os.path.join("notebooks/data","Train (1).csv")))
+            data=pd.read_csv(Path(os.path.join("notebooks/data","Train (4).csv")))
             logging.info(" i have read dataset as a df")
             
             
