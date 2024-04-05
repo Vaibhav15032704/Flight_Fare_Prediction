@@ -31,7 +31,7 @@ class ModelEvaluation:
 
         
 
-            mlflow.set_registry_uri("https://dagshub.com/sunny.savita/fsdsmendtoend.mlflow")
+            #mlflow.set_registry_uri("https://dagshub.com/sunny.savita/fsdsmendtoend.mlflow")
             
             tracking_url_type_store = urlparse(mlflow.get_tracking_uri()).scheme
             
@@ -67,5 +67,14 @@ class ModelEvaluation:
                 
 
             
+        except Exception as e:
+            raise e
+
+
+    def start_evaluation(self):
+        try:
+            train_data_path,test_data_path=self.start_data_ingestion()
+            train_arr,test_arr=self.start_data_transformation(train_data_path,test_data_path)
+            self.start_model_training(train_arr,test_arr)
         except Exception as e:
             raise e
